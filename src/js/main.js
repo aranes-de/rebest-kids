@@ -68,7 +68,7 @@
     e.preventDefault();
     const zeilen = [...new FormData(form)].filter(([k, v]) => v && k !== "Datenschutz").map(([k, v]) => `${k}: ${v}`);
     const betreff = encodeURIComponent("Anmeldung ReBest Fitness Kids Club");
-    location.href = `${form.action.split("?")[0]}?subject=${betreff}&body=${encodeURIComponent(zeilen.join("\n"))}`;
+    location.href = `mailto:${form.dataset.mail}?subject=${betreff}&body=${encodeURIComponent(zeilen.join("\n"))}`;
     const b = $("button", form).getBoundingClientRect();
     konfetti(b.left + b.width / 2, b.top);
     $("[data-hinweis]", form).textContent = "Danke! Euer E-Mail-Programm öffnet sich jetzt. Bitte die Nachricht dort noch absenden.";

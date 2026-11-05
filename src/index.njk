@@ -236,7 +236,7 @@ permalink: /index.html
         <a class="infozeile" href="https://www.google.com/maps/search/?api=1&query=Langobardenstra%C3%9Fe+2%2C+93053+Regensburg" rel="noopener" target="_blank"><b>Adresse</b>{{ site.street }}, {{ site.city }}</a>
       </address>
     </div>
-    <form class="formular" id="anmelden" data-formular action="mailto:{{ site.mail }}" method="post" enctype="text/plain" data-pop>
+    <form class="formular" id="anmelden" data-formular data-mail="{{ site.mail }}" method="post" data-pop>
       <h3>Jetzt anmelden</h3>
       <div class="felder">
         <label>Euer Name<input name="Name" autocomplete="name" required></label>
@@ -249,6 +249,7 @@ permalink: /index.html
       <label class="zustimmung"><input type="checkbox" name="Datenschutz" required><span>Ich habe die <a href="https://www.regensburg-fitness.de/Datenschutz" rel="noopener" target="_blank">Datenschutzerklärung</a> gelesen und stimme zu.</span></label>
       <button class="knopf" type="submit">Anmeldung abschicken</button>
       <p class="formular__hinweis" data-hinweis>Beim Abschicken öffnet sich euer E-Mail-Programm mit der fertigen Nachricht.</p>
+      <noscript><p class="formular__hinweis">Das Formular braucht JavaScript. Schreibt uns sonst direkt an <a href="mailto:{{ site.mail }}">{{ site.mail }}</a>.</p></noscript>
     </form>
   </div>
   <footer class="fuss wrap">
