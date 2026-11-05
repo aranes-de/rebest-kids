@@ -1,0 +1,270 @@
+---
+permalink: /index.html
+---
+{%- set wave1 = "M0 60V34C160 4 320 4 480 28s320 40 480 18 320-44 480-18v32Z" -%}
+{%- set wave2 = "M0 60V20c200 34 360 36 560 12S960 0 1120 14s240 22 320 8v38Z" -%}
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReBest Fitness Kids Club Regensburg – Starke Kids, entspannte Eltern</title>
+<meta name="description" content="Bewegung, die Spaß macht: Der ReBest Fitness Kids Club in Regensburg macht Kinder spielerisch stärker, fitter und selbstbewusster, während Eltern Zeit für sich haben.">
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="{{ site.url }}/">
+<link rel="icon" href="/images/favicon.png" type="image/png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="ReBest Fitness Kids Club – Starke Kids. Fitte Eltern. Ein Club!">
+<meta property="og:description" content="Spielerisches Training in kleinen Gruppen, während Eltern selbst trainieren oder entspannen.">
+<meta property="og:url" content="{{ site.url }}/">
+<meta property="og:image" content="{{ site.url }}/images/og.jpg">
+<link rel="preload" as="image" type="image/webp" media="(min-width: 1001px)" imagesrcset="/images/hero-1400.webp 1400w, /images/hero-2000.webp 2000w, /images/hero-2752.webp 2752w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" media="(max-width: 1000px)" href="/images/hero-m.webp" fetchpriority="high">
+<style>{% inlineCss "src/css/style.css" %}</style>
+<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+<header class="nav" data-nav>
+  <div class="nav__in">
+    <a class="nav__logo" href="#start" aria-label="ReBest Fitness Kids Club, zum Start">
+      <img src="/images/logo-280.webp" srcset="/images/logo-280.webp 280w, /images/logo-560.webp 560w" sizes="(max-width: 1060px) 142px, 178px" alt="" width="560" height="222">
+    </a>
+    <nav class="nav__links" aria-label="Hauptmenü">
+      <a href="#start" style="--c:var(--red)">Start</a>
+      <a href="#ueber-uns" style="--c:var(--yellow)">Über uns</a>
+      <a href="#angebot" style="--c:var(--blue)">Angebot</a>
+      <a href="#eltern" style="--c:var(--orange)">Eltern</a>
+      <a href="#faq" style="--c:var(--olive)">FAQ</a>
+      <a href="#kontakt" style="--c:var(--red)">Kontakt</a>
+    </nav>
+    <a class="knopf knopf--nav" href="#anmelden">Jetzt anmelden</a>
+    <button class="burger" type="button" data-burger aria-expanded="false" aria-controls="mnav" aria-label="Menü öffnen"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" data-mnav hidden>
+  <a href="#start" style="--i:0;--c:var(--red-d)">Start</a>
+  <a href="#ueber-uns" style="--i:1;--c:var(--orange-d)">Über uns</a>
+  <a href="#angebot" style="--i:2;--c:var(--blue)">Angebot</a>
+  <a href="#eltern" style="--i:3;--c:var(--olive-d)">Eltern</a>
+  <a href="#faq" style="--i:4;--c:var(--red-d)">FAQ</a>
+  <a href="#kontakt" style="--i:5;--c:var(--blue)">Kontakt</a>
+  <a class="knopf" href="#anmelden" style="--i:6">Jetzt anmelden</a>
+</div>
+
+<main id="inhalt">
+
+<div class="anker" id="start"></div>
+<section class="panel" data-panel aria-labelledby="hero-titel">
+<div class="panel__karte hero">
+  <picture class="hero__bild">
+    <source media="(max-width: 1000px)" srcset="/images/hero-m.webp" width="900" height="831">
+    <img src="/images/hero-2000.webp" srcset="/images/hero-1400.webp 1400w, /images/hero-2000.webp 2000w, /images/hero-2752.webp 2752w" sizes="100vw" alt="Lachendes Mädchen auf der Turnmatte, dahinter balancieren und turnen weitere Kinder in einer hellen Halle" width="2752" height="1536" fetchpriority="high" decoding="async">
+  </picture>
+  <div class="hero__text wrap">
+    <p class="aufkleber">Der ReBest Fitness Kids Club kommt!</p>
+    <h1 id="hero-titel" aria-label="Starke Kids. Fitte Eltern. Ein Club!">
+      <span class="zeile" style="--c:var(--red-d)">{{ "Starke Kids." | letters | safe }}</span>
+      <span class="zeile" style="--c:var(--blue)">{{ "Fitte Eltern." | letters(11) | safe }}</span>
+      <span class="zeile zeile--pinsel" style="--c:var(--orange-d)">{{ "Ein Club!" | letters(23) | safe }}
+        <svg class="pinsel" viewBox="0 0 300 24" aria-hidden="true" preserveAspectRatio="none"><path d="M6 17C70 6 190 3 294 12" pathLength="1"/></svg>
+      </span>
+    </h1>
+    <p class="hero__lead">Wir machen Kinder wieder fit – mit Spaß statt Leistungsdruck.</p>
+    <div class="knoepfe">
+      <a class="knopf" href="#anmelden">Jetzt anmelden</a>
+      <a class="knopf knopf--hell" href="#angebot">Das erwartet eure Kids</a>
+    </div>
+  </div>
+  <button class="stempel" type="button" data-konfetti aria-label="Konfetti werfen">
+    <svg class="stempel__ring" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="rund" d="M100 100m-76 0a76 76 0 1 1 152 0a76 76 0 1 1-152 0"/></defs><text><textPath href="#rund">Bewegung, die Spaß macht! · Bewegung, die Spaß macht! ·</textPath></text></svg>
+    <span class="figur" style="--c:var(--red-d)"></span>
+  </button>
+</div>
+</section>
+
+<div class="anker" id="ueber-uns"></div>
+<section class="panel panel--weiss" data-panel aria-labelledby="ueber-titel">
+  <svg class="welle" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="{{ wave1 }}"/></svg>
+<div class="panel__karte">
+  <div class="wrap ueber">
+    <div class="ueber__text" data-pop>
+      <p class="kicker" style="--c:var(--orange-d)">Über uns</p>
+      <h2 id="ueber-titel">Bewegung, die <em style="--c:var(--red-d)">Spaß</em> macht!</h2>
+      <p class="gross">Mit unserem ReBest Fitness Kids Club bieten wir eine einfache, flexible und bezahlbare Lösung, um Kinder wieder für Bewegung zu begeistern und ihre körperliche Entwicklung gezielt zu fördern.</p>
+      <p>In kleinen Gruppen schaffen unsere qualifizierten und einfühlsamen Trainer eine Umgebung, in der sich jedes Kind wohlfühlt, individuell gefördert wird und vor allem eines erlebt: Spaß an Bewegung!</p>
+      <p>Dabei setzen wir genau dort an, wo heute häufig Defizite bestehen – bei Kraft, Ausdauer, Koordination, Beweglichkeit und Körpergefühl.</p>
+    </div>
+    <div class="ueber__bild" data-pop>
+      <div class="klecks"><img src="/images/spass-800.webp" srcset="/images/spass-480.webp 480w, /images/spass-800.webp 800w, /images/spass-1200.webp 1200w" sizes="(max-width: 860px) 90vw, 46vw" alt="Ein Junge springt jubelnd von einem Mattenblock, daneben feiern ihn andere Kinder und eine Trainerin" width="1200" height="1200" loading="lazy" decoding="async"></div>
+      <span class="deko deko--stern" style="--c:var(--red);left:-3%;top:6%"></span>
+      <span class="deko deko--kreis" style="--c:var(--blue);right:2%;bottom:0"></span>
+      <div class="who">
+        <b>3</b>
+        <p>Tage pro Woche sollte Sport intensiv sein und Muskeln und Knochen stärken – so sagt es die WHO.</p>
+      </div>
+    </div>
+  </div>
+  <div class="band" aria-hidden="true"><div class="band__lauf">
+    {%- for r in [1,2,3,4] %}<span>Kraft</span><span>Ausdauer</span><span>Koordination</span><span>Beweglichkeit</span><span>Körpergefühl</span>{% endfor -%}
+  </div></div>
+</div>
+</section>
+
+<div class="anker" id="angebot"></div>
+<section class="panel panel--blau" data-panel aria-labelledby="angebot-titel">
+  <svg class="welle" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="{{ wave2 }}"/></svg>
+<div class="panel__karte angebot" data-quer>
+  <div class="quer" data-quer-pin>
+    <div class="quer__spur" data-quer-spur tabindex="0" role="group" aria-label="Unser Angebot, seitlich verschiebbar">
+      <div class="quer__intro">
+        <p class="kicker" style="--c:var(--blue)">Angebot</p>
+        <h2 id="angebot-titel">Das erwartet eure <em style="--c:var(--orange-d)">Kids</em></h2>
+        <p class="gross">Spielerisches Training in kleinen Gruppen. Für mehr Körpergefühl, Selbstvertrauen und Freude an Bewegung.</p>
+        <p class="wisch">Einfach weiterscrollen <span aria-hidden="true">→</span></p>
+      </div>
+      {%- set karten = [
+        {t:"Kraft", x:"Muskeln und Knochen wachsen mit: klettern, ziehen, stützen und jede Menge Spaß dabei.", c:"var(--red-d)", b:"kraft", pos:"58% 50%", alt:"Kind klettert an einer Holz-Kletterwand in der Turnhalle"},
+        {t:"Ausdauer", x:"Rennen, hüpfen, weitermachen. Spielerisch wird die Puste Stück für Stück länger.", c:"var(--orange-d)", b:"ausdauer", pos:"50% 35%", alt:"Lachender Junge rennt durch die Turnhalle"},
+        {t:"Koordination", x:"Balancieren, fangen, springen: Hände, Füße und Kopf lernen zusammenzuspielen.", c:"var(--yellow)", b:"koordination", pos:"45% 30%", alt:"Kind balanciert mit ausgestreckten Armen auf einem Schwebebalken", ink:true},
+        {t:"Beweglichkeit", x:"Strecken, drehen, rollen. So bleibt der Körper geschmeidig und locker.", c:"var(--blue)", b:"beweglichkeit", pos:"66% 60%", alt:"Mädchen macht auf einer Matte eine seitliche Dehnübung"},
+        {t:"Körpergefühl", x:"Wer seinen Körper kennt, traut sich mehr zu. Das macht stark und selbstbewusst.", c:"var(--olive-d)", b:"koerpergefuehl", pos:"55% 28%", alt:"Mädchen steht auf einem Bein und hält mit ausgebreiteten Armen die Balance"}
+      ] -%}
+      {%- for k in karten %}
+      <article class="karte karte--foto{% if k.ink %} karte--dunkel{% endif %}" style="--c:{{ k.c }}">
+        <img class="karte__bild" src="/images/k-{{ k.b }}-800.webp" srcset="/images/k-{{ k.b }}-480.webp 480w, /images/k-{{ k.b }}-800.webp 800w" sizes="(max-width: 520px) 78vw, 400px" alt="{{ k.alt }}" width="800" height="800" loading="lazy" decoding="async" style="object-position:{{ k.pos }}">
+        <span class="karte__nr" aria-hidden="true">{{ loop.index }}</span>
+        <div class="karte__text">
+          <h3>{{ k.t }}</h3>
+          <p>{{ k.x }}</p>
+        </div>
+      </article>
+      {%- endfor %}
+      <article class="karte karte--liste" style="--c:#fff">
+        <h3>Das ist fest eingeplant</h3>
+        <ul class="haken">
+          <li>Zum Start 2 × wöchentlich zu festen Zeiten</li>
+          <li>Qualifizierte, empathische Trainer</li>
+          <li>Individuelle Förderung in kleinen Gruppen</li>
+          <li>Flexible und bezahlbare Angebote für Familien</li>
+        </ul>
+        <a class="knopf" href="#anmelden">Jetzt anmelden</a>
+      </article>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="anker" id="eltern"></div>
+<section class="panel panel--weiss" data-panel aria-labelledby="eltern-titel">
+  <svg class="welle" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="{{ wave1 }}"/></svg>
+<div class="panel__karte">
+  <div class="wrap eltern">
+    <div class="eltern__kopf" data-pop>
+      <p class="kicker" style="--c:var(--red-d)">Eltern</p>
+      <h2 id="eltern-titel">Ein Weg, <em style="--c:var(--blue)">zwei Gewinner</em></h2>
+      <p class="gross">Die Kids werden fit und die Eltern profitieren von wertvoller Zeit für sich selbst – ganz ohne zusätzliche Fahrten oder Wartezeiten.</p>
+    </div>
+    <div class="wippe" data-wippe aria-hidden="true">
+      <div class="wippe__brett">
+        <div class="wippe__seite"><span class="figur" style="--c:var(--red-d)"></span><b>Kids</b></div>
+        <div class="wippe__seite"><span class="figur" style="--c:var(--blue)"></span><b>Eltern</b></div>
+      </div>
+      <div class="wippe__fuss"></div>
+    </div>
+    <ul class="plus">
+      <li data-pop style="--c:var(--orange-d)"><h3>Keine Wartezeit</h3><p>Während eure Kids trainieren, nutzt ihr die Zeit einfach selbst.</p></li>
+      <li data-pop style="--c:var(--blue)"><h3>Selbst fit bleiben</h3><p>Trainiert parallel zu euren Kindern mit einem eigenen Workout.</p></li>
+      <li data-pop style="--c:var(--olive-d)"><h3>Zeit für euch</h3><p>Genießt eine kleine Auszeit in unserem Wellnessbereich.</p></li>
+      <li data-pop style="--c:var(--red-d)"><h3>Weniger Stress</h3><p>Feste Zeiten, kurze Wege und Sport für die ganze Familie unter einem Dach.</p></li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<div class="anker" id="faq"></div>
+<section class="panel panel--gruen" data-panel aria-labelledby="faq-titel">
+  <svg class="welle" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="{{ wave2 }}"/></svg>
+<div class="panel__karte">
+  <div class="wrap faq">
+    <div class="faq__kopf" data-pop>
+      <p class="kicker" style="--c:var(--olive-d)">FAQ</p>
+      <h2 id="faq-titel">Was ihr <em style="--c:var(--red-d)">wissen</em> wollt</h2>
+      <div class="kreisfigur">
+        <span class="kreisfigur__kreis"></span>
+        <div class="kreisfigur__maske"><img src="/images/maedchen-584.webp" srcset="/images/maedchen-300.webp 300w, /images/maedchen-584.webp 584w" sizes="(max-width: 860px) 42vw, 300px" alt="Lachendes Mädchen im gestreiften T-Shirt zwinkert und zeigt mit dem Finger zur Seite" width="584" height="1130" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+    <div class="faq__liste">
+      {%- set fragen = [
+        ["Wann geht der Kids Club los?", "Der ReBest Fitness Kids Club kommt bald. Meldet euch einfach bei uns, dann erfahrt ihr mehr und seid rechtzeitig dabei."],
+        ["Wie oft und wann ist Training?", "Zum Start zweimal pro Woche zu festen Zeiten. So könnt ihr den Familienalltag zuverlässig planen."],
+        ["Was wird trainiert?", "Abwechslungsreiche Bewegungseinheiten für Kraft, Ausdauer, Koordination, Beweglichkeit und Körpergefühl – immer spielerisch."],
+        ["Wer betreut die Kinder?", "Qualifizierte und einfühlsame Trainer. In kleinen Gruppen wird jedes Kind individuell gefördert."],
+        ["Muss mein Kind schon sportlich sein?", "Nein. Bei uns gibt es Spaß statt Leistungsdruck, und jedes Kind soll sich wohlfühlen."],
+        ["Was mache ich, während mein Kind trainiert?", "Was euch guttut: ein eigenes Workout, eine entspannte Auszeit im Wellnessbereich oder einfach etwas Zeit für euch."],
+        ["Was kostet der Kids Club?", "Unsere Angebote sind flexibel und bezahlbar. Fragt uns gern direkt nach den Details."],
+        ["Warum ist Bewegung für Kinder so wichtig?", "Kraft, Koordination und Ausdauer sind entscheidend für eine gesunde Entwicklung. Die WHO rät außerdem, Zeiten im Sitzen, gerade vor dem Bildschirm, möglichst gering zu halten und Kindern verschiedene, altersgerechte Bewegungsangebote zu machen."]
+      ] -%}
+      {%- set farben = ["--red-d","--blue","--orange-d","--olive-d"] -%}
+      {%- for f in fragen %}
+      <details class="frage" name="faq" style="--c:var({{ farben[loop.index0 % 4] }})"{% if loop.first %} open{% endif %}>
+        <summary>{{ f[0] }}<span class="frage__plus" aria-hidden="true"></span></summary>
+        <p>{{ f[1] }}</p>
+      </details>
+      {%- endfor %}
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="anker" id="kontakt"></div>
+<section class="panel panel--weiss" data-panel aria-labelledby="kontakt-titel">
+  <svg class="welle" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="{{ wave1 }}"/></svg>
+<div class="panel__karte">
+  <div class="wrap kontakt">
+    <div class="kontakt__info" data-pop>
+      <p class="kicker" style="--c:var(--orange-d)">Kontakt</p>
+      <h2 id="kontakt-titel">Interesse <em style="--c:var(--blue)">geweckt?</em></h2>
+      <p class="gross">Dann meldet euch bei uns und erfahrt mehr über unseren neuen Kids Club!</p>
+      <address>
+        <a class="infozeile" href="tel:{{ site.telHref }}"><b>Telefon</b>{{ site.tel }}</a>
+        <a class="infozeile" href="mailto:{{ site.mail }}"><b>E-Mail</b>{{ site.mail }}</a>
+        <a class="infozeile" href="https://www.google.com/maps/search/?api=1&query=Langobardenstra%C3%9Fe+2%2C+93053+Regensburg" rel="noopener" target="_blank"><b>Adresse</b>{{ site.street }}, {{ site.city }}</a>
+      </address>
+    </div>
+    <form class="formular" id="anmelden" data-formular action="mailto:{{ site.mail }}" method="post" enctype="text/plain" data-pop>
+      <h3>Jetzt anmelden</h3>
+      <div class="felder">
+        <label>Euer Name<input name="Name" autocomplete="name" required></label>
+        <label>Name des Kindes<input name="Kind" required></label>
+        <label>Alter des Kindes<input name="Alter" inputmode="numeric" required></label>
+        <label>Telefon<input name="Telefon" type="tel" autocomplete="tel"></label>
+        <label class="breit">E-Mail<input name="E-Mail" type="email" autocomplete="email" required></label>
+        <label class="breit">Nachricht (optional)<textarea name="Nachricht" rows="3"></textarea></label>
+      </div>
+      <label class="zustimmung"><input type="checkbox" name="Datenschutz" required><span>Ich habe die <a href="https://www.regensburg-fitness.de/Datenschutz" rel="noopener" target="_blank">Datenschutzerklärung</a> gelesen und stimme zu.</span></label>
+      <button class="knopf" type="submit">Anmeldung abschicken</button>
+      <p class="formular__hinweis" data-hinweis>Beim Abschicken öffnet sich euer E-Mail-Programm mit der fertigen Nachricht.</p>
+    </form>
+  </div>
+  <footer class="fuss wrap">
+    <img class="fuss__logo" src="/images/logo-hoch-300.webp" srcset="/images/logo-hoch-300.webp 300w, /images/logo-hoch-600.webp 600w" sizes="130px" alt="ReBest Fitness Kids Club" width="600" height="734" loading="lazy" decoding="async">
+    <p class="fuss__slogan">Starke Kids, entspannte Eltern!</p>
+    <nav class="fuss__links" aria-label="Rechtliches">
+      <a href="https://www.regensburg-fitness.de/impressum" rel="noopener" target="_blank">Impressum</a>
+      <a href="https://www.regensburg-fitness.de/Datenschutz" rel="noopener" target="_blank">Datenschutz</a>
+      <a href="https://www.regensburg-fitness.de/" rel="noopener" target="_blank">ReBest Fitness Club</a>
+    </nav>
+    <p class="fuss__credit"><a href="https://www.aranes.de" rel="noopener" target="_blank">Webdesign by ARANES GmbH &amp; Co. KG</a></p>
+  </footer>
+</div>
+</section>
+
+</main>
+<script>{% inlineJs "src/js/main.js" %}</script>
+</body>
+</html>
