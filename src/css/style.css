@@ -85,18 +85,21 @@ address { font-style: normal; }
 .panel { position: sticky; top: var(--stick, 0px); transform-origin: 50% calc(100% - 50vh); }
 .panel__karte { position: relative; background: var(--p, var(--bg)); }
 .panel--weiss { --p: #fff; } .panel--blau { --p: var(--t-blau); } .panel--gruen { --p: var(--t-gruen); }
-.panel__karte:not(.hero) { padding-block: calc(var(--nav-top) + var(--nav-h) + clamp(24px, 3vw, 44px)) clamp(60px, 7vw, 120px); }
+.panel__karte:not(.hero) { padding-block: calc(var(--nav-top) + var(--nav-h) + clamp(24px, 3vw, 44px)) calc(clamp(60px, 7vw, 120px) + var(--auslauf, 0px)); min-height: var(--karte-min, 0px); }
+.panel:last-of-type .panel__karte { padding-bottom: clamp(60px, 7vw, 120px); min-height: 0; }
 .welle { position: absolute; left: 0; right: 0; bottom: calc(100% - 1px); width: 100%; height: var(--welle); overflow: visible; pointer-events: none; }
 .welle { filter: drop-shadow(0 -10px 16px rgba(29, 54, 68, .17)); }
 .welle path { fill: var(--p); }
 
 /* Hintere Karte: kleiner, blasser, mattes Glas mit Schatten.
-   --oben ist der Teil der Karte, der über dem Bildschirm liegt. */
+   --oben ist der Teil der Karte, der über dem Bildschirm liegt.
+   --f läuft ab dem Moment, in dem die nächste Karte auftaucht (Form und Schatten),
+   --u erst, wenn sie den Auslauf hinter sich hat (Unschärfe und Blässe, damit der Text lesbar bleibt). */
 .ist-hinten { will-change: transform; }
 .ist-hinten .welle { opacity: 0; }
 .ist-hinten::before { content: ""; position: absolute; inset: var(--oben, 0px) 0 0; border-radius: calc(var(--f) * 44px); box-shadow: 0 22px 70px rgba(29, 54, 68, calc(var(--f) * .34)); }
-.ist-hinten .panel__karte { clip-path: inset(var(--oben, 0px) 0 0 0 round calc(var(--f) * 44px)); opacity: calc(1 - var(--f) * .42); }
-.ist-hinten .panel__karte::after { content: ""; position: absolute; z-index: 5; inset: var(--oben, 0px) 0 0; border-radius: calc(var(--f) * 44px); background: rgba(255, 255, 255, calc(var(--f) * .4)); -webkit-backdrop-filter: blur(calc(var(--f) * 6px)) saturate(1.15); backdrop-filter: blur(calc(var(--f) * 6px)) saturate(1.15); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, calc(var(--f) * .9)), inset 0 40px 60px -40px rgba(255, 255, 255, calc(var(--f) * .9)); pointer-events: none; }
+.ist-hinten .panel__karte { clip-path: inset(var(--oben, 0px) 0 0 0 round calc(var(--f) * 44px)); opacity: calc(1 - var(--u) * .42); }
+.ist-hinten .panel__karte::after { content: ""; position: absolute; z-index: 5; inset: var(--oben, 0px) 0 0; border-radius: calc(var(--f) * 44px); background: rgba(255, 255, 255, calc(var(--u) * .4)); -webkit-backdrop-filter: blur(calc(var(--u) * 6px)) saturate(1.15); backdrop-filter: blur(calc(var(--u) * 6px)) saturate(1.15); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, calc(var(--f) * .9)), inset 0 40px 60px -40px rgba(255, 255, 255, calc(var(--f) * .9)); pointer-events: none; }
 .ist-weg { opacity: 0; pointer-events: none; }
 
 /* ---------- Hero ---------- */

@@ -83,15 +83,21 @@
   const querPin = $("[data-quer-pin]");
   const wippe = $("[data-wippe]");
   const stapeln = () => !reduced && innerWidth > 860;
+  // Zusätzlicher Scrollweg am Ende jeder Karte (Anteil der Bildschirmhöhe).
+  // Die nächste Karte legt erst diese Strecke zurück, dann beginnt die Unschärfe.
+  const AUSLAUF = .3;
   let querWeg = 0;
 
   const messen = () => {
     const vh = innerHeight;
+    const auslauf = stapeln() ? vh * AUSLAUF : 0;
+    document.documentElement.style.setProperty("--auslauf", `${auslauf}px`);
+    document.documentElement.style.setProperty("--karte-min", stapeln() ? `${vh + auslauf}px` : "0px");
     querWeg = 0;
     if (stapeln()) {
       querWeg = Math.max(0, querSpur.scrollWidth - innerWidth);
       querPin.style.cssText = `position:sticky;top:0;height:${vh}px;display:flex;align-items:center`;
-      quer.style.height = `${vh + querWeg}px`;
+      quer.style.height = `${vh + querWeg + auslauf}px`;
     } else {
       querPin.style.cssText = "";
       quer.style.height = "";
@@ -125,6 +131,7 @@
         p.classList.toggle("ist-hinten", f > 0 && f < 1);
         p.classList.toggle("ist-weg", f >= 1);
         p.style.setProperty("--f", f.toFixed(3));
+        p.style.setProperty("--u", clamp((f - AUSLAUF) / (1 - AUSLAUF)).toFixed(3));
         p.style.transform = f ? `scale(${(1 - f * .07).toFixed(4)})` : "";
       });
       const w = wippe.getBoundingClientRect();
